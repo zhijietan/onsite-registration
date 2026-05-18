@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/Claude-Code/**)",
+      "Bash(npx --yes create-next-app@latest onsite-registration --typescript --tailwind --app --no-src-dir --import-alias \"@/*\" --eslint --turbopack --use-npm --yes)",
+      "Bash(npm install *)",
+      "Bash(npm uninstall *)",
+      "Bash(npm run *)",
+      "Bash(grep -q \"Ready in\\\\|started server\" \"C:\\\\\\\\Users\\\\\\\\zhiji\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\D--Claude-Code-onsite-registration\\\\\\\\d6f41fac-5992-4772-a223-9a40f8217de0\\\\\\\\tasks\\\\\\\\b3zoisrqv.output\")",
+      "Bash(tail -5 \"C:\\\\\\\\Users\\\\\\\\zhiji\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\D--Claude-Code-onsite-registration\\\\\\\\d6f41fac-5992-4772-a223-9a40f8217de0\\\\\\\\tasks\\\\\\\\b3zoisrqv.output\")",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "mcp__Claude_in_Chrome__computer"
+    ]
+  }
+}

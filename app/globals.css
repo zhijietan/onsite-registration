@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-light-bg: #ede8dc;
+  --color-light-text: #2d2600;
+  --color-light-muted: #7a6a4a;
+  --color-light-border: #c5bead;
+  --color-light-chip: #e0d9cc;
+  --color-light-chip-hover: #d5cebf;
+
+  --color-dark-bg: #1a1605;
+  --color-dark-text: #ede8dc;
+  --color-dark-muted: #a89876;
+  --color-dark-border: #3a3220;
+  --color-dark-chip: #2a2410;
+  --color-dark-chip-hover: #38301c;
+
+  --color-accent: #c5b060;
+  --color-accent-blue: #8a9fff;
+}
+
+html {
+  background: var(--color-light-bg);
+  color: var(--color-light-text);
+}
+
+html.dark {
+  background: var(--color-dark-bg);
+  color: var(--color-dark-text);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
