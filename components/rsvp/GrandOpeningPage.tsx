@@ -25,9 +25,7 @@ const T = {
     highlightsTitle: "活动亮点",
     highlights: [
       "开业剪彩",
-      "公司愿景分享",
-      "贵宾致辞",
-      "团队荣耀表彰",
+      "庆典仪式与表彰",
       "幸运抽奖",
       "精美茶点与交流",
     ],
@@ -69,10 +67,8 @@ const T = {
     address: "37-20 Prince St. Suite 2A, Flushing, NY 11354",
     highlightsTitle: "Event Highlights",
     highlights: [
-      "Ribbon Cutting Ceremony",
-      "Vision Sharing",
-      "Guest Remarks",
-      "Team Recognition",
+      "Ribbon Cutting",
+      "Ceremony & Recognition",
       "Lucky Draw",
       "Networking & Refreshments",
     ],
@@ -100,11 +96,7 @@ const T = {
 const HIGHLIGHT_ICONS = [
   // scissors – ribbon cutting
   <svg key="sc" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></svg>,
-  // bar-chart – vision sharing
-  <svg key="bc" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg>,
-  // mic – guest remarks
-  <svg key="mc" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 1 3 3v7a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3M8 22h8"/></svg>,
-  // trophy – team recognition
+  // trophy – ceremony & recognition
   <svg key="tr" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>,
   // gift – lucky draw
   <svg key="gi" className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>,
