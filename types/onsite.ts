@@ -18,4 +18,5 @@ export interface OnsiteEventConfig {
   venueAddress?: string;
   thumbnailImg?: string;
   rsvpUrl?: string;
+  hasRsvpPage?: boolean;
 }

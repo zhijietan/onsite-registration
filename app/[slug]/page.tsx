@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllEventConfigs, getEventConfigBySlug } from "@/config/events";
+import GrandOpeningPage from "@/components/rsvp/GrandOpeningPage";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -30,6 +31,11 @@ export default async function OnsiteEventPage({
   const { slug } = await params;
   const event = getEventConfigBySlug(slug);
   if (!event) notFound();
+
+  // Event-specific RSVP pages
+  if (event.slug === "GrandOpening20260530") {
+    return <GrandOpeningPage />;
+  }
 
   return (
     <main className="min-h-screen">

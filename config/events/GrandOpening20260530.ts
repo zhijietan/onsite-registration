@@ -8,8 +8,9 @@ const config: OnsiteEventConfig = {
   dateLabel: "5/30/2026, SAT",
   timeLabel: "6 PM (EST)",
   location: "New York",
-  venueAddress: "TBD",
+  venueAddress: "37-20 Prince St. Suite 2A, Flushing, NY 11354",
   // thumbnailImg: "/image/onsite/GrandOpening20260530.jpg", // add when image is ready
+  hasRsvpPage: true,
 };
 
 export default config;
