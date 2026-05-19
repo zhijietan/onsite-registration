@@ -41,7 +41,7 @@ export default function OnsiteArchive({ configs }: Props) {
         <div className="relative w-full md:w-64 flex-shrink-0">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <svg
-              className="h-4 w-4 text-[#7a6a4a] dark:text-[#a89876]"
+              className="h-4 w-4 text-[#7a6a4a] dark:text-[#9a8c72]"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -59,7 +59,7 @@ export default function OnsiteArchive({ configs }: Props) {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search events..."
-            className="block w-full pl-9 pr-3 py-2 border border-[#c5bead] dark:border-[#3a3220] rounded-lg leading-5 bg-[#ede8dc] dark:bg-[#2a2410] placeholder-[#7a6a4a] dark:placeholder-[#a89876] text-[#2d2600] dark:text-[#ede8dc] text-sm focus:outline-none focus:ring-1 focus:ring-[#2d2600] dark:focus:ring-[#ede8dc] transition-colors"
+            className="block w-full pl-9 pr-3 py-2 border border-[#c5bead] dark:border-[#252318] rounded-lg leading-5 bg-[#ede8dc] dark:bg-[#1c1a12] placeholder-[#7a6a4a] dark:placeholder-[#9a8c72] text-[#2d2600] dark:text-[#ede8dc] text-sm focus:outline-none focus:ring-1 focus:ring-[#2d2600] dark:focus:ring-[#ede8dc] transition-colors"
           />
         </div>
 
@@ -73,7 +73,7 @@ export default function OnsiteArchive({ configs }: Props) {
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wide transition-colors whitespace-nowrap ${
                   active
                     ? "bg-[#2d2600] text-white dark:bg-[#ede8dc] dark:text-[#2d2600] shadow-sm"
-                    : "bg-[#e0d9cc] text-[#7a6a4a] hover:text-[#2d2600] hover:bg-[#d5cebf] dark:bg-[#2a2410] dark:text-[#a89876] dark:hover:text-[#ede8dc] dark:hover:bg-[#38301c]"
+                    : "bg-[#e0d9cc] text-[#7a6a4a] hover:text-[#2d2600] hover:bg-[#d5cebf] dark:bg-[#1c1a12] dark:text-[#9a8c72] dark:hover:text-[#ede8dc] dark:hover:bg-[#252218]"
                 }`}
               >
                 {category}
@@ -85,7 +85,7 @@ export default function OnsiteArchive({ configs }: Props) {
 
       {/* Count */}
       <div className="flex items-center justify-between mb-6">
-        <p className="text-sm text-[#7a6a4a] dark:text-[#a89876]">
+        <p className="text-sm text-[#7a6a4a] dark:text-[#9a8c72]">
           {filtered.length} {filtered.length === 1 ? "event" : "events"}
         </p>
       </div>
@@ -93,7 +93,7 @@ export default function OnsiteArchive({ configs }: Props) {
       {/* Grid or empty */}
       {filtered.length === 0 ? (
         <div className="text-center py-16">
-          <p className="text-[#7a6a4a] dark:text-[#a89876] text-sm">
+          <p className="text-[#7a6a4a] dark:text-[#9a8c72] text-sm">
             No matching events found.
           </p>
           <button
@@ -111,7 +111,7 @@ export default function OnsiteArchive({ configs }: Props) {
               href={`/${event.slug}`}
               className="group block"
             >
-              <div className="aspect-square rounded-xl overflow-hidden border border-[#c5bead] dark:border-[#3a3220] group-hover:border-[#8a7a5a] dark:group-hover:border-[#a89876] group-hover:shadow-md transition-all relative">
+              <div className="aspect-square rounded-xl overflow-hidden border border-[#c5bead] dark:border-[#252318] group-hover:border-[#8a7a5a] dark:group-hover:border-[#9a8c72] group-hover:shadow-md transition-all relative">
                 {event.thumbnailImg ? (
                   <div className="absolute inset-0">
                     <Image
@@ -124,7 +124,7 @@ export default function OnsiteArchive({ configs }: Props) {
                     <div className="absolute inset-0 bg-[#2d2600]/80 group-hover:bg-[#2d2600]/70 transition-colors" />
                   </div>
                 ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#3a3220] to-[#2d2600]" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#252318] to-[#2d2600]" />
                 )}
 
                 <div className="relative z-10 w-full h-full flex flex-col justify-between p-3">
@@ -143,7 +143,7 @@ export default function OnsiteArchive({ configs }: Props) {
                   </div>
 
                   <div>
-                    <p className="text-[#c5b060] text-[10px] font-bold uppercase tracking-wide mb-1.5">
+                    <p className="text-[#c9a84c] text-[10px] font-bold uppercase tracking-wide mb-1.5">
                       {event.dateLabel} · {event.timeLabel}
                     </p>
                     <p className="text-white text-xs font-bold leading-snug line-clamp-4">

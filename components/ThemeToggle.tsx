@@ -29,7 +29,7 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label="Toggle color theme"
       title={mounted ? `Switch to ${theme === "dark" ? "light" : "dark"} mode` : "Toggle theme"}
-      className="p-2 rounded-lg border border-[#c5bead] dark:border-[#3a3220] text-[#2d2600] dark:text-[#ede8dc] hover:bg-[#e0d9cc] dark:hover:bg-[#2a2410] transition-colors"
+      className="p-2 rounded-lg border border-[#c5bead] dark:border-[#252318] text-[#2d2600] dark:text-[#ede8dc] hover:bg-[#e0d9cc] dark:hover:bg-[#1c1a12] transition-colors"
     >
       {mounted && theme === "dark" ? (
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

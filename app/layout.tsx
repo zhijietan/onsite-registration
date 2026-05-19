@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-[#ede8dc] text-[#2d2600] dark:bg-[#1a1605] dark:text-[#ede8dc]">
+      <body className="min-h-full flex flex-col font-sans bg-[#ede8dc] text-[#2d2600] dark:bg-[#0e0c09] dark:text-[#ede8dc]">
         {children}
       </body>
     </html>

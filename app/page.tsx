@@ -30,12 +30,12 @@ export default function OnsiteArchivePage() {
                 <path d="M10 18h4" />
               </svg>
             </div>
-            <div className="w-px h-8 bg-[#c5bead] dark:bg-[#3a3220]" />
+            <div className="w-px h-8 bg-[#c5bead] dark:bg-[#252318]" />
             <div>
               <h1 className="text-xl font-extrabold leading-tight">
                 Onsite Archive
               </h1>
-              <p className="text-sm text-[#7a6a4a] dark:text-[#a89876] mt-0.5">
+              <p className="text-sm text-[#7a6a4a] dark:text-[#9a8c72] mt-0.5">
                 by Zhijie Tan
               </p>
             </div>
@@ -44,7 +44,7 @@ export default function OnsiteArchivePage() {
         </div>
 
         {configs.length === 0 ? (
-          <p className="text-[#7a6a4a] dark:text-[#a89876] text-sm">
+          <p className="text-[#7a6a4a] dark:text-[#9a8c72] text-sm">
             No events yet.
           </p>
         ) : (

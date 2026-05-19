@@ -10,14 +10,14 @@
   --color-light-chip: #e0d9cc;
   --color-light-chip-hover: #d5cebf;
 
-  --color-dark-bg: #1a1605;
+  --color-dark-bg: #0e0c09;
   --color-dark-text: #ede8dc;
-  --color-dark-muted: #a89876;
-  --color-dark-border: #3a3220;
-  --color-dark-chip: #2a2410;
-  --color-dark-chip-hover: #38301c;
+  --color-dark-muted: #9a8c72;
+  --color-dark-border: #252318;
+  --color-dark-chip: #1c1a12;
+  --color-dark-chip-hover: #252218;
 
-  --color-accent: #c5b060;
+  --color-accent: #c9a84c;
   --color-accent-blue: #8a9fff;
 }
 
@@ -27,7 +27,7 @@ html {
 }
 
 html.dark {
-  background: var(--color-dark-bg);
+  background: #0e0c09;
   color: var(--color-dark-text);
 }
 

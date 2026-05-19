@@ -36,7 +36,7 @@ export default async function OnsiteEventPage({
       <div className="max-w-3xl mx-auto px-4 py-10 md:py-14">
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-sm text-[#7a6a4a] dark:text-[#a89876] hover:text-[#2d2600] dark:hover:text-[#ede8dc] mb-8"
+          className="inline-flex items-center gap-1.5 text-sm text-[#7a6a4a] dark:text-[#9a8c72] hover:text-[#2d2600] dark:hover:text-[#ede8dc] mb-8"
         >
           <svg
             className="w-4 h-4"
@@ -59,19 +59,19 @@ export default async function OnsiteEventPage({
         <h1 className="mt-2 text-3xl md:text-4xl font-extrabold leading-tight">
           {event.title}
         </h1>
-        <p className="mt-4 text-sm font-bold text-[#7a6a4a] dark:text-[#a89876] uppercase tracking-wide">
+        <p className="mt-4 text-sm font-bold text-[#7a6a4a] dark:text-[#9a8c72] uppercase tracking-wide">
           {event.dateLabel} · {event.timeLabel}
         </p>
-        <p className="mt-1 text-sm text-[#7a6a4a] dark:text-[#a89876]">
+        <p className="mt-1 text-sm text-[#7a6a4a] dark:text-[#9a8c72]">
           {event.location}
           {event.venueAddress ? ` — ${event.venueAddress}` : ""}
         </p>
 
-        <div className="mt-10 p-6 rounded-xl border border-[#c5bead] dark:border-[#3a3220] bg-[#e0d9cc] dark:bg-[#2a2410]">
+        <div className="mt-10 p-6 rounded-xl border border-[#c5bead] dark:border-[#252318] bg-[#e0d9cc] dark:bg-[#1c1a12]">
           <p className="text-sm text-[#2d2600] dark:text-[#ede8dc] font-bold">
             RSVP details coming soon.
           </p>
-          <p className="mt-2 text-sm text-[#7a6a4a] dark:text-[#a89876]">
+          <p className="mt-2 text-sm text-[#7a6a4a] dark:text-[#9a8c72]">
             This event page is being prepared. Check back closer to the event
             date for registration details.
           </p>
