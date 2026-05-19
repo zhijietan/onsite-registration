@@ -9,7 +9,7 @@ const config: OnsiteEventConfig = {
   timeLabel: "6 PM (EST)",
   location: "New York",
   venueAddress: "TBD",
-  thumbnailImg: "/image/onsite/GrandOpening20260530.jpg",
+  // thumbnailImg: "/image/onsite/GrandOpening20260530.jpg", // add when image is ready
 };
 
 export default config;
