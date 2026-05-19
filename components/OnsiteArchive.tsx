@@ -124,21 +124,21 @@ export default function OnsiteArchive({ configs }: Props) {
                     <div className="absolute inset-0 bg-[#2d2600]/80 group-hover:bg-[#2d2600]/70 transition-colors" />
                   </div>
                 ) : (
-                  <div className="absolute inset-0 bg-[#1c1a12]" />
+                  <div className="absolute inset-0 bg-[#ede8dc]" />
                 )}
 
                 <div className="relative z-10 w-full h-full flex flex-col justify-between p-3">
                   <div className="flex items-center">
-                    <span className="text-[9px] font-bold text-[#9a8c72] uppercase tracking-wider">
+                    <span className={`text-[9px] font-bold uppercase tracking-wider ${event.thumbnailImg ? "text-[#9a8c72]" : "text-[#7a6a4a]"}`}>
                       {event.category}
                     </span>
                   </div>
 
                   <div>
-                    <p className="text-[#c9a84c] text-[10px] font-bold uppercase tracking-wide mb-1.5">
+                    <p className={`text-[10px] font-bold uppercase tracking-wide mb-1.5 ${event.thumbnailImg ? "text-[#c9a84c]" : "text-[#7a6a4a]"}`}>
                       {event.dateLabel} · {event.timeLabel}
                     </p>
-                    <p className="text-white text-xs font-bold leading-snug line-clamp-4">
+                    <p className={`text-xs font-bold leading-snug line-clamp-4 ${event.thumbnailImg ? "text-white" : "text-[#2d2600]"}`}>
                       {event.title}
                     </p>
                   </div>
