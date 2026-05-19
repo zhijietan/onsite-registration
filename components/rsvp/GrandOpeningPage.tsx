@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 type Lang = "zh" | "en";
 
@@ -171,19 +170,6 @@ export default function GrandOpeningPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-gray-800 pb-16 selection:bg-red-800 selection:text-white">
-      {/* Back link */}
-      <div className="max-w-2xl mx-auto px-4 pt-4">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-red-800 transition-colors"
-        >
-          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="m15 18-6-6 6-6" />
-          </svg>
-          {t.backLabel}
-        </Link>
-      </div>
-
       {/* Language toggle */}
       <div className="fixed top-4 right-4 z-50">
         <button
@@ -208,13 +194,21 @@ export default function GrandOpeningPage() {
           <p className="text-yellow-400/80 font-semibold tracking-[0.3em] text-[11px] uppercase mb-3">
             {t.brand}
           </p>
-          <p className="text-yellow-300 font-serif tracking-widest text-sm md:text-base uppercase mb-3">
-            {t.subtitle}
-          </p>
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-3 tracking-wide bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 text-transparent bg-clip-text leading-tight">
-            {t.title}
-          </h1>
-          <p className="text-yellow-600/70 text-[11px] tracking-widest mb-4">{t.divider}</p>
+          {lang === "en" ? (
+            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-3 tracking-wide bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 text-transparent bg-clip-text leading-tight">
+              {t.subtitle}<br />{t.title}
+            </h1>
+          ) : (
+            <>
+              <p className="text-yellow-300 font-serif tracking-widest text-sm md:text-base uppercase mb-3">
+                {t.subtitle}
+              </p>
+              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-3 tracking-wide bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 text-transparent bg-clip-text leading-tight">
+                {t.title}
+              </h1>
+              <p className="text-yellow-600/70 text-[11px] tracking-widest mb-4">{t.divider}</p>
+            </>
+          )}
           <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto mb-5 rounded-full" />
           <p className="text-base md:text-lg font-medium text-red-100 mb-4">{t.tagline}</p>
           <p className="text-sm text-red-200 leading-relaxed max-w-md mx-auto font-light">
