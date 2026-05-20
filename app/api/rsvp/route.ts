@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 
 const EVENT_LABELS: Record<string, string> = {
   GrandOpening20260530: "Grand Opening 2026-05-30",
+  GrandOpening20260613: "Grand Opening 2026-06-13",
 };
 
 export async function POST(req: Request) {

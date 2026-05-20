@@ -4,6 +4,13 @@ import { useState } from "react";
 
 type Lang = "zh" | "en";
 
+const EVENT_DATES = {
+  GrandOpening20260530: { zh: "2026年5月30日（星期六）", en: "Saturday, May 30, 2026" },
+  GrandOpening20260613: { zh: "2026年6月13日（星期六）", en: "Saturday, June 13, 2026" },
+} as const;
+
+type Slug = keyof typeof EVENT_DATES;
+
 const T = {
   zh: {
     lang: "English",
@@ -16,7 +23,7 @@ const T = {
     invitation:
       "诚挚邀请您莅临现场，与我们共同见证这一重要里程碑，开启新的成长、新的合作与新的未来。",
     dateLabel: "日期",
-    date: "2026年5月30日（星期六）",
+    date: "", // injected at runtime from EVENT_DATES
     timeLabel: "时间",
     reception: "入场接待：9:30 AM",
     ceremony: "开业典礼：10:00 AM",
@@ -59,7 +66,7 @@ const T = {
     invitation:
       "We sincerely invite you to join us as we celebrate this important milestone and witness the beginning of a new journey, new opportunities, and new success together.",
     dateLabel: "Date",
-    date: "Saturday, May 30, 2026",
+    date: "", // injected at runtime from EVENT_DATES
     timeLabel: "Time",
     reception: "Reception: 9:30 AM",
     ceremony: "Ceremony: 10:00 AM",
@@ -107,7 +114,7 @@ const HIGHLIGHT_ICONS = [
 const INPUT_CLS =
   "w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-800 focus:border-red-800 outline-none transition-all text-sm";
 
-export default function GrandOpeningPage() {
+export default function GrandOpeningPage({ slug = "GrandOpening20260530" }: { slug?: string }) {
   const [lang, setLang] = useState<Lang>("zh");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -118,7 +125,9 @@ export default function GrandOpeningPage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  const t = T[lang];
+  const eventSlug = (slug in EVENT_DATES ? slug : "GrandOpening20260530") as Slug;
+  const dates = EVENT_DATES[eventSlug];
+  const t = { ...T[lang], date: dates[lang] };
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -133,7 +142,7 @@ export default function GrandOpeningPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          slug: "GrandOpening20260530",
+          slug: eventSlug,
           firstName: firstName.trim(),
           lastName: lastName.trim(),
           phone: phone.trim(),

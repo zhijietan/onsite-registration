@@ -33,8 +33,11 @@ export default async function OnsiteEventPage({
   if (!event) notFound();
 
   // Event-specific RSVP pages
-  if (event.slug === "GrandOpening20260530") {
-    return <GrandOpeningPage />;
+  if (
+    event.slug === "GrandOpening20260530" ||
+    event.slug === "GrandOpening20260613"
+  ) {
+    return <GrandOpeningPage slug={event.slug} />;
   }
 
   return (
