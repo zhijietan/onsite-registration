@@ -68,6 +68,7 @@ export async function POST(req: Request) {
         minute: "2-digit",
         hour12: true,
       });
+      const notionDbUrl = `https://www.notion.so/${dbId.replace(/-/g, "")}`;
       const text = [
         `🎉 <b>New RSVP — ${eventLabel}</b>`,
         ``,
@@ -76,6 +77,8 @@ export async function POST(req: Request) {
         `📧 <b>Email:</b> ${email || "—"}`,
         `👥 <b>Guests:</b> ${guests}`,
         `⏰ <b>Time (EST):</b> ${timestamp}`,
+        ``,
+        `📋 <a href="${notionDbUrl}">Onsite Registrants (Notion)</a>`,
       ].join("\n");
 
       const tgRes = await fetch(
